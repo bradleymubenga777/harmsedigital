@@ -1,0 +1,128 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+//GLOBAL CLASSES
+body{
+    overflow-x: hidden;
+}
+
+.whiteBG{
+    background-color: white;
+}
+
+.blueLine{
+}
+
+.h-divider{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid #17a6c6;
+}
+
+//Quick CTA Bar
+.quickCTA{
+    background-color: #17a6c6;
+}
+
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+
+//Navbar
+
+//Home Component
+.heroImg{
+    background: url('./img/Untitled.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.textHero{
+    font-weight: 777;
+    color: white;
+}
+
+.textBlueBG{
+    background-color: #17a6c6;
+    padding: 0 0.7rem 0 0.7rem;
+}
+
+.heroText{
+    color: yellow;
+    text-shadow: 4.5px 4.5px #ef0d7b;
+}
+
+.roundBlueBG{
+    background-color: #17a6c6;
+    height: 25vh;
+    width: 25vh;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.aboutUsSection{
+    background: #17a6c6;
+}
+
+.whitePurpleBtn{
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px #ef0d7b;
+    padding: 1vh;
+}
+
+.whiteBlueBtn{
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px #17a6c6;
+    padding: 1vh;
+}
+
+.pinkBackGround{
+    background-color: #ef0d7b;
+}
+
+.whiteText{
+    color: black;
+}
+
+.footerLine{
+    background-color: #17a6c6;
+}
+
+.myInput{
+    border-radius: 0;
+    border: 2px solid #17a6c6;
+}
+
+//RESPONSIVE FEATURES
+@media (max-width: 576px) {
+    .heroText{
+        text-shadow: 2.5px 2.5px #ef0d7b;
+    }
+
+    .textHero{
+        font-size: 15vw;
+    }
+}
+
+@media (min-width: 576px) {
+    .textHero{
+        font-size: 15vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .textHero{
+        font-size: 15vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .textHero{
+        font-size: 7vw;
+    }
+}
