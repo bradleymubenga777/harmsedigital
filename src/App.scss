@@ -1,15 +1,27 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 //GLOBAL CLASSES
 body{
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    color: inherit;
+}
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+a.blueLink:hover{
+    color: #17a6c6;
 }
 
 .whiteBG{
     background-color: white;
-}
-
-.blueLine{
 }
 
 .h-divider{
@@ -37,11 +49,11 @@ ul{
     background: url('./img/Untitled.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 100vh;
 }
 
 .textHero{
-    font-weight: 777;
+    font-weight: 800;
     color: white;
 }
 
@@ -70,8 +82,44 @@ ul{
 .whitePurpleBtn{
     background-color: white;
     color: black;
+    font-weight: 700;
     box-shadow: 5px 5px #ef0d7b;
     padding: 1vh;
+}
+
+a.whitePurpleBtn:hover{
+    background-color: white;
+    box-shadow: 2.5px 2.5px #ef0d7b;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+
+}
+
+.yellowBtn{
+    background-color: yellow;
+    border: 1px solid #17a6c6;
+    font-weight: 700;
+}
+
+.yellowBtn:hover{
+    background-color: yellow;
+    border: 1px solid #ef0d7b;
+    transition: ease-in-out 0.5s;
+}
+
+.yellowPinkBtn{
+    background-color: yellow;
+    color: black;
+    box-shadow: 5px 5px #ef0d7b;
+    padding: 1vh;
+    font-weight: 700;
+}
+
+a.yellowPinkBtn:hover{
+    background-color: yellow;
+    box-shadow: 2.5px 2.5px #ef0d7b;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
 }
 
 .whiteBlueBtn{
@@ -79,6 +127,19 @@ ul{
     color: black;
     box-shadow: 5px 5px #17a6c6;
     padding: 1vh;
+    font-weight: 700;
+}
+
+.fixedToTop{
+    position: fixed;
+    z-index: 100;
+}
+
+a.whiteBlueBtn:hover{
+    background-color: white;
+    box-shadow: 2.5px 2.5px #17a6c6;
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
 }
 
 .pinkBackGround{
@@ -106,6 +167,10 @@ ul{
 
     .textHero{
         font-size: 15vw;
+    }
+
+    .heroImg{
+        background-position: center center;
     }
 }
 

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import harmseDigitalGreyLogo from '../img/harmse-digital-logo-greyscale.png';
 
 export default function Footer() {
     return (
@@ -7,7 +8,7 @@ export default function Footer() {
                 <h4>About us</h4>
                 <div className="blueLine"></div>
                 <div className="d-flex flex-column">
-                    <a href="#">Our Story</a>
+                    <a href="#" className="blueLink">Our Story</a>
                 </div>
             </div>
 
@@ -16,10 +17,10 @@ export default function Footer() {
                     <h4>Products & Services</h4>
                     <div className="blueLine"></div>
                     <div className="d-flex flex-column">
-                        <a href="#">Printing</a>
-                        <a href="#">Marketing</a>
-                        <a href="#">VOIP</a>
-                        <a href="#">Innovative Notions</a>
+                        <a href="#" className="blueLink">Printing</a>
+                        <a href="#" className="blueLink">Marketing</a>
+                        <a href="#" className="blueLink">VOIP</a>
+                        <a href="#" className="blueLink">Innovative Notions</a>
                     </div>
                 </div>
             </div>
@@ -28,16 +29,16 @@ export default function Footer() {
                 <h4>Contact</h4>
                 <div className="blueLine"></div>
                 <div className="d-flex flex-column">
-                    <a href="#">Cape Town</a>
+                    <a href="#" className="blueLink">Cape Town</a>
                 </div>
             </div>
 
-            <div className="col-sm-12 col-md-12 col-xl-12 col-lg-12 pt-4">
-                <h4>HARMSE DIGITAL</h4>
+            <div className="col-sm-12 col-md-12 col-xl-12 col-lg-12 py-4">
+                <img src={harmseDigitalGreyLogo} className="img-fluid" width="200px"/>
             </div>
 
             <div className="h-divider text-center">
-                <p className="py-2">2021 Harmse Digital Communications | Web Design by <a href="#">ONLive</a></p>
+                <p className="py-2 responsiveText">2021 Harmse Digital Communications | Web Design by <a href="#" className="blueLink">ONLive</a></p>
             </div>
         </footer>
     )
