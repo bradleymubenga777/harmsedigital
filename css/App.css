@@ -10878,7 +10878,7 @@ ul {
 }
 
 .heroImg {
-  background: url("./img/Untitled.jpeg");
+  background: url('../img/Untitled.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
