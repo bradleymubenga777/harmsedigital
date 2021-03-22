@@ -10849,7 +10849,8 @@ a {
 
 a:hover {
   text-decoration: none;
-  color: inherit;
+  color: #ef0d7b;
+  transition: ease-in-out 0.5s;
 }
 
 a.blueLink:hover {
@@ -10882,6 +10883,14 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+}
+
+.heroDivImg{
+  background: url('../img/PrintingBG.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 20vh;
+  height: 80vh;
 }
 
 .textHero {
@@ -11008,6 +11017,10 @@ a.whiteBlueBtn:hover {
     font-size: 15vw;
   }
   .heroImg {
+    background-position: center center;
+  }
+
+  .heroDivImg {
     background-position: center center;
   }
 }
