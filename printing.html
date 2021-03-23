@@ -5,22 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/App.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
+</head>
     <title>Harmse Digital Printing</title>
 </head>
 <body>
     <header class="fixedToTop w-100">
         <div class="quickCTA">
-            <ul class="d-flex flex-row mr-auto my-0 flex-wrap">
-                <li><i></i> <a href="tel:061 559 2567" class="quickCTAlinks">061 559 2567</a></li>
+            <ul class="d-flex flex-row mr-auto my-0">
+                <li><a href="tel:061 559 2567" class="quickCTAlinks"><i class="fas fa-phone-alt"></i> 061 559 2567</a></li>
                 <span class="mx-3"></span>
-                <li class="d-none d-md-block d-lg-block d-xl-block"><i></i><a href="mailto:info@harmsedigital.co.za" class="quickCTAlinks">info@harmsedigital.co.za</a></li>
+                <li><a href="mailto:info@harmsedigital.co.za" class="quickCTAlinks"><i class="far fa-envelope"></i>  info@harmsedigital.co.za</a></li>
             </ul>
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-light d-flex flex-column whiteBG">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <img class="img-fluid" width="150px" src="./img/harmse-digital-logo.png"/>
+                    <img class="img-fluid" width="150px" src="./img/harmse-printing-logo.png"/>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,11 +32,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="/index.html">About us</a>
                         </li>
 
                         <li class="nav-item">
@@ -41,11 +44,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Marketing</a>
+                            <a class="nav-link" href="/marketing.html">Marketing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">VOIP</a>
+                            <a class="nav-link" href="/voip.html">VOIP</a>
                         </li>
 
                         <button class="yellowBtn ml-2">Contact us</button>
@@ -65,7 +68,7 @@
     <article class="py-5">
         <div class="row mx-5 my-3">
             <div class="d-none d-md-block d-lg-block d-xl-block col-sm-12 col-md-12 col-lg-6 col-xl-6">
-                <img src={aboutImage} class="img-fluid" />
+                <img src="/img/printing-about.jpg"class="img-fluid" />
             </div>
 
             <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex flex-column justify-content-center">
@@ -74,29 +77,29 @@
                 
                 <div class="d-flex row">
                     <ul class="col-sm-12 col-md-12 col-lg-4 col-cl-4">
-                        <li>Business Cards</li>
-                        <li>Brochures</li>
-                        <li>Booklets</li>
-                        <li>Books</li>
+                        <li><i class="fas fa-address-card"></i> Business Cards</li>
+                        <li><i class="fas fa-book-open"></i> Brochures</li>
+                        <li><i class="fas fa-book"></i> Booklets</li>
+                        <li><i class="fas fa-book"></i> Books</li>
                     </ul>
 
                     <ul class="col-sm-12 col-md-12 col-lg-4 col-cl-4">
-                        <li>Binding</li>
-                        <li>Banners</li>
-                        <li>Flyers</li>
-                        <li>Posters</li>
+                        <li><i class="far fa-address-book"></i> Binding</li>
+                        <li><i class="fas fa-chess-board"></i> Banners</li>
+                        <li><i class="fas fa-book-open"></i> Flyers</li>
+                        <li><i class="fas fa-book-open"></i> Posters</li>
                     </ul>
 
                     <ul class="col-sm-12 col-md-12 col-lg-4 col-cl-4">
-                        <li>Training Manuals</li>
-                        <li>Labels</li>
-                        <li>Folders</li>
-                        <li>Letters</li>
+                        <li><i class="fas fa-user-friends"></i> Training Manuals</li>
+                        <li><i class="fas fa-envelope-open-text"></i> Labels</li>
+                        <li><i class="far fa-folder"></i> Folders</li>
+                        <li><i class="fas fa-envelope-open-text"></i> Letters</li>
                     </ul>
                 </div>
 
                 <div>
-                    <a class="yellowPinkBtn">Request a qoute</a>
+                    <a class="yellowPinkBtn" href="https://wa.link/p59zrp">Request a qoute</a>
                 </div>
             </div>
         </div>
@@ -209,7 +212,7 @@
         </div>
 
         <div class="h-divider text-center d-flex flex-column flex-wrap px-3">
-            <p class="py-2 responsiveText">2021 Harmse Digital Communications | Web Design by <a href="#" class="blueLink">ONLive</a></p>
+            <p class="py-2 responsiveText">2021 Harmse Digital Printing | Web Design by <a href="#" class="blueLink">ONLive</a></p>
         </div>
     </footer>
 </body>

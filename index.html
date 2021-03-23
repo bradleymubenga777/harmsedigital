@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/App.css">
-    <title>Harmse Digital Communications | Printing Company In Cape Town</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <title>Harmse VOIP Solutions | </title>
 </head>
 <body>
     <header class="fixedToTop w-100">
         <div class="quickCTA">
             <ul class="d-flex flex-row mr-auto my-0">
-                <li><i></i> <a href="tel:061 559 2567" class="quickCTAlinks">061 559 2567</a></li>
+                <li><a href="tel:061 559 2567" class="quickCTAlinks"><i class="fas fa-phone-alt"></i> 061 559 2567</a></li>
                 <span class="mx-3"></span>
-                <li><i></i><a href="mailto:info@harmsedigital.co.za" class="quickCTAlinks">info@harmsedigital.co.za</a></li>
+                <li><a href="mailto:info@harmsedigital.co.za" class="quickCTAlinks"><i class="far fa-envelope"></i>  info@harmsedigital.co.za</a></li>
             </ul>
         </div>
 
@@ -29,11 +30,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About us</a>
+                            <a class="nav-link" href="/index.html">About us</a>
                         </li>
 
                         <li class="nav-item">
@@ -41,11 +42,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Marketing</a>
+                            <a class="nav-link" href="/marketing.html">Marketing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">VOIP</a>
+                            <a class="nav-link" href="/voip.html">VOIP</a>
                         </li>
 
                         <button class="yellowBtn ml-2">Contact us</button>
@@ -62,10 +63,31 @@
                 <h1 class="textHero">WITH US</h1>
 
                 <div class="d-flex">
-                    <a class="yellowPinkBtn">Get a qoute</a>
+                    <a class="yellowPinkBtn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Get a qoute</a>
                     <span class="mx-4"></span>
-                    <a class="whiteBlueBtn">Learn more</a>
+<!--                     <a class="whiteBlueBtn">Learn more</a> -->
                 </div>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Contact us today for a FREE Qoute</h5>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-12">
+                                <li><a href="tel:0615592567"><i class="fas fa-phone-alt"></i> 061 559 2567</a></li>
+                                <li><a href="https://wa.link/p59zrp"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+  
             </div>
         </header>
 
@@ -87,7 +109,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 my-3">
-                    <a href="/" class="d-flex flex-column align-items-center">
+                    <a href="./marketing.html" class="d-flex flex-column align-items-center">
                         <div class="roundBlueBG d-flex justify-content-center align-items-center">
                             <img src="/img/marketing.png" class="img-fluid" width="75px"/>
                         </div>
@@ -96,7 +118,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 my-3">
-                    <a href="/" class="d-flex flex-column align-items-center">
+                    <a href="./voip.html" class="d-flex flex-column align-items-center">
                         <div class="roundBlueBG d-flex justify-content-center align-items-center">
                             <img src="/img/voip.png" class="img-fluid" width="75px"/>
                         </div>
