@@ -10913,27 +10913,6 @@ ul {
   height: 80vh;
 }
 
-
-#spin:after {
-  content:"";
-  animation: spin 50s ease-in-out infinite;
-  transition: ease-in-out 2s ;
-}
-
-@keyframes spin {
-  0% { content:"BRANDING"; }
-  10% { content:"MARKETING"; }
-  20% { content:"PRINTING"; }
-  30% { content:"VOIP"; }
-  40% { content:"BRANDING"; }
-  50% { content: "MARKETING"; }
-  60% { content: "PRINTING"; }
-  70% { content: "VOIP"; }
-  80% { content: "MARKETING"; }
-  90% { content: "BRANDING"; }
-  100% { content: "VOIP"; }
-}
-
 button{
   border: none;
 }
