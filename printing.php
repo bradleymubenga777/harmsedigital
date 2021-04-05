@@ -1,4 +1,30 @@
-<!DOCTYPE html>
+<?php
+    $message_sent = false;
+    
+    if (isset($_POST['email']) && $_POST['email'] != '') {
+        
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $userPhoneNumber = $_POST['phoneNumber'];
+            $howToHelp = $_POST['howToHelp'];
+            $subject = "Request For Qoutation";
+        
+            $to = "info@harmsedigital.co.za";
+            $body = "";
+        
+            $body .= "From $userName". "\r\n";
+            $body .= "Email: $userEmail". "\r\n";
+            $body .= "Phone Number: $userPhoneNumber". "\r\n";
+            $body .= "Message: $howToHelp". "\r\n";
+        
+            mail($to, $subject, $body);
+
+            $message_sent = true;
+        }
+    }
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,23 +66,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="/index.php">Home</a>
                         </li>
 
 <!--                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html">About us</a>
+                            <a class="nav-link" href="/index.php">About us</a>
                         </li> -->
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="/printing.html">Printing</a>
+                            <a class="nav-link active" href="/printing.php">Printing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/marketing.html">Marketing</a>
+                            <a class="nav-link" href="/marketing.php">Marketing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/voip.html">VOIP</a>
+                            <a class="nav-link" href="/voip.php">VOIP</a>
                         </li>
 
                         <button class="yellowBtn ml-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact us</button>
@@ -71,21 +97,22 @@
         <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Fill in the form and we will contact you within 24hrs</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Fill in the form and we will contact you within 24hrs</h5>
             </div>
-            <div class="modal-body">
-                <form class="d-flex flex-column">
-                    <input class="myInput" type="text" placeholder=" Name">
-                    <input class="mt-3 myInput" type="email" placeholder=" Email">
-                    <input class="mt-3 myInput" type="tel" placeholder=" Phone number">
 
-                    <textarea class="mt-3 myInput" placeholder=" How can we help you?"></textarea>
-                    
+            <div class="modal-body">
+                <form method="POST" class="d-flex flex-column">
+                    <input name="name" class="myInput" type="text" placeholder=" Name">
+                    <input name="email" class="mt-3 myInput" type="email" placeholder=" Email">
+                    <input name="phoneNumber" class="mt-3 myInput" type="tel" placeholder=" Phone number">
+
+                    <textarea name="howToHelp" class="mt-3 myInput" placeholder=" How can we help you?"></textarea>
+                                
                     <button type="submit" class="yellowPinkBtn mt-3">Send</button>
                 </form>
             </div>
-<!--                         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+    <!--    <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div> -->
         </div>
         </div>
@@ -144,7 +171,13 @@
             <h1 class="font-weight-light text-center mb-4">Our Portfolio</h1> 
 
             <div class="row text-center text-lg-left">
-
+                
+                <div class="col-lg-3 col-md-4 col-12">
+                    <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://ik.imagekit.io/78n76p2wnul/image2_m4iuIjZCfgarz.jpeg" alt="" />
+                    </a>
+                </div>
+                
                 <div class="col-lg-3 col-md-4 col-12">
                     <a href="#" class="d-block mb-4 h-100">
                         <img class="img-fluid img-thumbnail" src="https://ik.imagekit.io/78n76p2wnul/IMG_5134_ePOI6kZnO.JPG" alt="" />
@@ -159,6 +192,12 @@
 
                 <div class="col-lg-3 col-md-4 col-12">
                     <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://ik.imagekit.io/78n76p2wnul/image33_U22qKD-dE.jpeg" alt="" />
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12">
+                    <a href="#" class="d-block mb-4 h-100">
                         <img class="img-fluid img-thumbnail" src="https://ik.imagekit.io/78n76p2wnul/IMG-20201216-WA0003_yFfQRixnT4.JPEG" alt="" />
                     </a>
                 </div>
@@ -166,6 +205,12 @@
                 <div class="col-lg-3 col-md-4 col-12">
                     <a href="#" class="d-block mb-4 h-100">
                         <img class="img-fluid img-thumbnail" src="https://ik.imagekit.io/78n76p2wnul/IMG-20191004-WA0012_3KG2Eh2Zrh.JPEG" alt="" />
+                    </a>
+                </div>
+
+                <div class="col-lg-3 col-md-4 col-12">
+                    <a href="#" class="d-block mb-4 h-100">
+                        <img class="img-fluid img-thumbnail" src="https://ik.imagekit.io/78n76p2wnul/image22_gPjxA5mSSICy.jpeg" alt="" />
                     </a>
                 </div>
 
@@ -224,10 +269,10 @@
                 <h4>Products & Services</h4>
                 <div class="blueLine"></div>
                 <div class="d-flex flex-column">
-                    <a href="#" class="blueLink">Printing</a>
-                    <a href="#" class="blueLink">Marketing</a>
-                    <a href="#" class="blueLink">VOIP</a>
-                    <a href="#" class="blueLink">Innovative Notions</a>
+                    <a href="/printing.php" class="blueLink">Printing</a>
+                    <a href="/marketing.php" class="blueLink">Marketing</a>
+                    <a href="/voip.php" class="blueLink">VOIP</a>
+                    <a href="/innovative.php" class="blueLink">Innovative Notions</a>
                 </div>
             </div>
         </div>
