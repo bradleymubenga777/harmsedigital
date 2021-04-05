@@ -1,4 +1,31 @@
-<!DOCTYPE html>
+<?php
+    $message_sent = false;
+    
+    if (isset($_POST['email']) && $_POST['email'] != '') {
+        
+        if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $userName = $_POST['name'];
+            $userEmail = $_POST['email'];
+            $userPhoneNumber = $_POST['phoneNumber'];
+            $howToHelp = $_POST['howToHelp'];
+            $subject = "Request For Qoutation";
+        
+            $to = "info@harmsedigital.co.za";
+            $body = "";
+        
+            $body .= "From $userName". "\r\n";
+            $body .= "Email: $userEmail". "\r\n";
+            $body .= "Phone Number: $userPhoneNumber". "\r\n";
+            $body .= "Message: $howToHelp". "\r\n";
+        
+            mail($to, $subject, $body);
+
+            $message_sent = true;
+        }
+    }
+?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,23 +57,23 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="/index.php">Home</a>
                         </li>
 
 <!--                         <li class="nav-item">
-                            <a class="nav-link" href="/index.html">About us</a>
+                            <a class="nav-link" href="/index.php">About us</a>
                         </li> -->
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/printing.html">Printing</a>
+                            <a class="nav-link" href="/printing.php">Printing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/marketing.html">Marketing</a>
+                            <a class="nav-link" href="/marketing.php">Marketing</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/voip.html">VOIP</a>
+                            <a class="nav-link" href="/voip.php">VOIP</a>
                         </li>
 
                         <button class="yellowBtn ml-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Contact us</button>
@@ -76,12 +103,12 @@
                         <h5 class="modal-title" id="exampleModalLabel">Fill in the form and we will contact you within 24hrs</h5>
                         </div>
                         <div class="modal-body">
-                            <form class="d-flex flex-column">
-                                <input class="myInput" type="text" placeholder=" Name">
-                                <input class="mt-3 myInput" type="email" placeholder=" Email">
-                                <input class="mt-3 myInput" type="tel" placeholder=" Phone number">
+                            <form method="POST" class="d-flex flex-column">
+                                <input name="name" class="myInput" type="text" placeholder=" Name">
+                                <input name="email" class="mt-3 myInput" type="email" placeholder=" Email">
+                                <input name="phoneNumber" class="mt-3 myInput" type="tel" placeholder=" Phone number">
 
-                                <textarea class="mt-3 myInput" placeholder=" How can we help you?"></textarea>
+                                <textarea name="howToHelp" class="mt-3 myInput" placeholder=" How can we help you?"></textarea>
                                 
                                 <button type="submit" class="yellowPinkBtn mt-3">Send</button>
                             </form>
@@ -105,7 +132,7 @@
 
             <div class="row text-center">
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 my-3">
-                    <a href="./printing.html" class="d-flex flex-column align-items-center">
+                    <a href="./printing.php" class="d-flex flex-column align-items-center">
                         <div class="roundBlueBG d-flex justify-content-center align-items-center">
                             <img src="/img/printing.png" class="img-fluid" width="75px"/>
                         </div>
@@ -114,7 +141,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 my-3">
-                    <a href="./marketing.html" class="d-flex flex-column align-items-center">
+                    <a href="./marketing.php" class="d-flex flex-column align-items-center">
                         <div class="roundBlueBG d-flex justify-content-center align-items-center">
                             <img src="/img/marketing.png" class="img-fluid" width="65px"/>
                         </div>
@@ -123,7 +150,7 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 my-3">
-                    <a href="./voip.html" class="d-flex flex-column align-items-center">
+                    <a href="./voip.php" class="d-flex flex-column align-items-center">
                         <div class="roundBlueBG d-flex justify-content-center align-items-center">
                             <img src="/img/voip.png" class="img-fluid" width="75px"/>
                         </div>
